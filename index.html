@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shudh Puja Samagari Ghar</title>
+
+    <meta name="description" content="Shudh Puja Samagari Ghar in Amravati offers complete puja samagri, hawan kits, certified rudraksha, brass diyas and festival puja items. Visit our store in Rajapeth Chowk, Amravati.">
+    <meta name="keywords" content="Puja Samagri Amravati, Hawan Samagri, Rudraksha Shop Amravati, Puja Store Near Me, Diwali Puja Items, Navratri Puja Samagri">
+    <meta name="author" content="Shudh Puja Samagari Ghar">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #E67E22;
+            --primary-light: #FAD7A0;
+            --accent: #B9770E;
+            --bg-body: #FDFBF7;
+            --bg-card: #FFFFFF;
+            --text-main: #4E342E;
+            --text-light: #795548;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Lora', serif; }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px; /* Slight adjust for image logo */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        /* NEW: Styles for your Logo Image */
+        .logo img {
+            height: 45px; /* Adjust this number to make logo bigger/smaller */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.7)), url('hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 35px;
+            color: var(--text-light);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* --- CATEGORIES --- */
+        .categories-bar {
+            background-color: var(--primary-light);
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: -25px;
+            position: relative;
+            z-index: 10;
+            border-radius: 8px;
+            margin-left: 5%;
+            margin-right: 5%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+        
+        .cat-item i { color: var(--primary); font-size: 1.2rem; }
+
+        /* --- PRODUCTS --- */
+        .products { padding: 100px 10%; }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-header p { color: var(--text-light); }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 220px;
+            width: 100%;
+            background-color: #f0f0f0;
+        }
+        
+        .product-img img { width: 100%; height: 100%; object-fit: cover; }
+
+        .product-info { padding: 20px; text-align: center; }
+        .product-info h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--accent); }
+        .product-info p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px; }
+
+        /* --- FESTIVAL BANNER --- */
+        .festival-banner {
+            background-color: var(--text-main);
+            color: #fff;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        
+        .festival-banner h2 { color: var(--primary-light); margin-bottom: 15px; }
+        .festival-banner p { opacity: 0.8; max-width: 700px; margin: 0 auto 30px; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #fffaf3;
+            border-top: 1px solid #eee;
+            padding: 35px 5% 15px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            align-items: start;
+        }
+
+        .footer-col h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-col ul li { margin-bottom: 8px; color: var(--text-light); font-size: 0.9rem; }
+
+        .footer-col a { color: var(--text-light); transition: 0.3s; }
+        .footer-col a:hover { color: var(--primary); }
+
+        .footer-col i { color: var(--primary); margin-right: 6px; }
+
+        .copyright {
+            text-align: center;
+            margin-top: 18px;
+            padding-top: 8px;
+            border-top: 1px solid #eee;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* --- MOBILE FIXES --- */
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 8px;
+                padding: 10px 12px;
+            }
+
+            /* Mobile Logo adjustments */
+            .logo { font-size: 1.3rem; }
+            .logo img { height: 40px; } /* Slightly smaller on phone */
+
+            .nav-links {
+                justify-content: center;
+                gap: 12px;
+                margin: 0;
+                width: 100%;
+            }
+
+            .nav-links a { font-size: 0.85rem; }
+
+            .cta-btn {
+                width: auto;
+                padding: 8px 18px;
+                font-size: 0.85rem;
+            }
+
+            .hero { height: auto; min-height: 60vh; padding: 50px 20px; background-position: 15% center ; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero p { font-size: 1.05rem; }
+
+            .categories-bar {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .cat-item { flex-direction: column; text-align: center; font-size: 0.95rem; }
+
+            .products { padding: 50px 5%; }
+
+            .section-header h2 { font-size: 2.1rem; }
+
+            .festival-banner { padding: 45px 5%; }
+
+            .footer-grid { text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .categories-bar { grid-template-columns: 1fr 1fr; }
+            footer iframe { height: 110px; border-radius: 6px; }
+            .cta-btn { padding: 12px 20px; font-size: 0.9rem; }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            background: #25D366;
+            color: white;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="Brand Logo"> 
+            Shudh Puja Samagari Ghar
+        </a>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#products">Collection</a>
+            <a href="#festivals">Festivals</a>
+        </div>
+        <a href="#contact" class="cta-btn">Visit Store</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Where Tradition Meets Purity</h1>
+    <p>
+        From the first light of the Diya to the final offering. We provide authentic Samagri for every occasion, bringing the sanctity of the temple to your home.
+        <span style="display:block; margin-top:10px; font-family:'Lora',serif; color:var(--primary); font-weight:600;">"Har Puja Mai Apke Sath"</span>
+    </p>
+    <div class="hero-btns">
+        <a href="#products" class="cta-btn">See Our Collection</a>
+    </div>
+</section>
+
+<div class="categories-bar">
+    <div class="cat-item"><i class="fas fa-fire-alt"></i> Hawan Samagari</div>
+    <div class="cat-item"><i class="fas fa-certificate"></i> Certified Rudraksha</div>
+    <div class="cat-item"><i class="fas fa-calendar-alt"></i> Festival Items</div>
+    <div class="cat-item"><i class="fas fa-shapes"></i> Brass & Idols</div>
+</div>
+
+<section id="products" class="products">
+    <div class="section-header">
+        <h2>Everything You Need</h2>
+        <p>From daily lighting of the lamp to grand Hawan ceremonies.</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="hawan.png" alt="Hawan samagri kit with mango wood and puja items">
+            </div>
+            <div class="product-info">
+                <h3>Hawan & Yagna Kits</h3>
+                <p>Pure Mango wood, Ghee, Jau, Til, and complete Hawan Samagari packs.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="dailypuja.png" alt="Daily puja items like agarbatti kapoor and cotton batti">
+            </div>
+            <div class="product-info">
+                <h3>Daily Essentials</h3>
+                <p>Camphor (Kapoor), Agarbatti, Cotton Wicks (Batti), and Pure Ghee.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="brass.png" alt="Brass diyas bells and temple idols">
+            </div>
+            <div class="product-info">
+                <h3>Brassware & Idols</h3>
+                <p>Heavy brass Diyas, Bells, and beautiful Murtis for your home temple.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="rudraksh.png" alt="Certified original rudraksha beads with authenticity card">
+            </div>
+            <div class="product-info">
+                <h3>Original Rudraksha</h3>
+                <p>100% Real & Lab Certified Nepal & Indonesia beads. Available from 1 Mukhi to 14 Mukhi.</p>
+                <span style="color: green; font-weight: 600; font-size: 0.85rem;">
+                    <i class="fas fa-check-circle"></i> Authenticity Card Included
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="festivals" class="festival-banner">
+    <h2>Ready for the Next Festival?</h2>
+    <p>Whether it's Diwali, Navratri, Ganesh Chaturthi, or a Satyanarayan Puja at home, we have pre-packed samagri lists ready for you.</p>
+    <a href="https://wa.me/919766320649" class="cta-btn" style="border:1px solid white;">Order List on WhatsApp</a>
+</section>
+
+<footer id="contact">
+    <div class="footer-grid">
+
+        <div class="footer-col">
+            <h4>Visit Shudh Puja Ghar</h4>
+            <ul>
+                <li>Shop, Rd Number 1, Rajapeth, Chowk</li>
+                <li>Amravati, Maharashtra 444605</li>
+            </ul>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.XXXXX!2d77.781234!3d20.938765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5559bdb849cbf266!2sShudh%20Puja%20Samagri%20Ghar!5e0!3m2!1sen!2sin!4v1700000000000"
+                width="100%" height="120"
+                style="border:0; margin-top:10px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> <a href="tel:+919960641535">+91 9960641535</a></li>
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919766320649">+91 9766320649</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Store Hours</h4>
+            <ul>
+                <li>Mon - Sat: 8:00 AM - 9:00 PM</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 Shudh Puja Samagari Ghar</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/919766320649" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
