@@ -238,6 +238,27 @@
         .festival-banner h2 { color: var(--primary-light); margin-bottom: 15px; }
         .festival-banner p { opacity: 0.8; max-width: 700px; margin: 0 auto 30px; }
 
+        /* --- ABOUT SECTION (NEW) --- */
+        .about-section {
+            background-color: #fff;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text { flex: 1; }
+        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text-main); font-family: 'Lora', serif; }
+        .about-text p { margin-bottom: 15px; color: var(--text-light); font-size: 1rem; }
+        
+        .about-img { flex: 1; text-align: center; display: flex; justify-content: center; }
+        .about-img img { 
+            max-width: 300px; 
+            width: 100%; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+        }
+
         /* --- FOOTER --- */
         footer {
             background: #fffaf3;
@@ -289,9 +310,10 @@
 
             .nav-links {
                 justify-content: center;
-                gap: 12px;
+                gap: 15px; /* Slight increase for 4 links */
                 margin: 0;
                 width: 100%;
+                flex-wrap: wrap; /* Allows wrapping if screen is very small */
             }
 
             .nav-links a { font-size: 0.85rem; }
@@ -302,7 +324,7 @@
                 font-size: 0.85rem;
             }
 
-            /* Mobile Hero with Left Focus for Ganpati */
+            /* Mobile Hero with Left Focus */
             .hero { 
                 height: auto; 
                 min-height: 60vh; 
@@ -326,6 +348,12 @@
             .products { padding: 50px 5%; }
             .section-header h2 { font-size: 2.1rem; }
             .festival-banner { padding: 45px 5%; }
+            
+            /* About Section Mobile */
+            .about-section { flex-direction: column-reverse; padding: 50px 5%; text-align: center; }
+            .about-text h2 { font-size: 2.1rem; }
+            .about-img img { max-width: 200px; margin-bottom: 20px; }
+
             .footer-grid { text-align: center; }
         }
 
@@ -368,6 +396,7 @@
             <a href="javascript:void(0);" onclick="window.scrollTo(0,0)">Home</a>
             <a href="javascript:void(0);" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Collection</a>
             <a href="javascript:void(0);" onclick="document.getElementById('festivals').scrollIntoView({behavior: 'smooth'})">Festivals</a>
+            <a href="javascript:void(0);" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Us</a>
         </div>
         
         <a href="javascript:void(0);" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn">Visit Store</a>
@@ -466,6 +495,18 @@
     <h2>Ready for the Next Festival?</h2>
     <p>Whether it's Diwali, Navratri, Ganesh Chaturthi, or a Satyanarayan Puja at home, we have pre-packed samagri lists ready for you.</p>
     <a href="https://wa.me/919766320649" class="cta-btn" style="border:1px solid white;">Order List on WhatsApp</a>
+</section>
+
+<section id="about" class="about-section">
+    <div class="about-text">
+        <h2>Our Legacy Since 1995</h2>
+        <p>Established in <strong>1995</strong>, <strong>Shudh Puja Samagari Ghar</strong> has been the trusted heart of Amravati's spiritual community for over three decades.</p>
+        <p>For more than 30 years, we have served generations of families, ensuring that every prayer is supported by pure and authentic offerings. We are dedicated to preserving our ancient traditions while providing the highest quality religious essentials.</p>
+        <p>We offer a complete collection of Puja Samagri for every type of ritual—whether it is for daily worship or a special ceremony. We promise that every item you take home brings positive energy, sanctity, and trust to your Puja.</p>
+    </div>
+    <div class="about-img">
+        <img src="img/logo.jpg" alt="Shudh Puja Samagari Ghar Amravati since 1995">
+    </div>
 </section>
 
 <footer id="contact">
