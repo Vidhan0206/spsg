@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shudh Puja Samagari Ghar</title>
+    <title>Shudh Puja Samagari Ghar | Complete Religious Store</title>
 
     <meta name="description" content="Shudh Puja Samagari Ghar in Amravati offers complete puja samagri, hawan kits, certified rudraksha, brass diyas and festival puja items. Visit our store in Rajapeth Chowk, Amravati.">
     <meta name="keywords" content="Puja Samagri Amravati, Hawan Samagri, Rudraksha Shop Amravati, Puja Store Near Me, Diwali Puja Items, Navratri Puja Samagri">
@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        /* SMOOTH SCROLL & OFFSET FIX */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px; /* Prevents Navbar from covering titles */
+        }
+
         :root {
             --primary: #E67E22;
             --primary-light: #FAD7A0;
@@ -35,7 +41,7 @@
 
         h1, h2, h3, h4 { font-family: 'Lora', serif; }
 
-        a { text-decoration: none; }
+        a { text-decoration: none; cursor: pointer; } /* Added cursor pointer */
         ul { list-style: none; }
 
         /* --- NAVIGATION --- */
@@ -51,7 +57,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 10px 20px; /* Slight adjust for image logo */
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -68,9 +74,8 @@
             text-decoration: none;
         }
 
-        /* NEW: Styles for your Logo Image */
         .logo img {
-            height: 45px; /* Adjust this number to make logo bigger/smaller */
+            height: 45px;
             width: auto;
             object-fit: contain;
         }
@@ -256,10 +261,8 @@
         }
 
         .footer-col ul li { margin-bottom: 8px; color: var(--text-light); font-size: 0.9rem; }
-
         .footer-col a { color: var(--text-light); transition: 0.3s; }
         .footer-col a:hover { color: var(--primary); }
-
         .footer-col i { color: var(--primary); margin-right: 6px; }
 
         .copyright {
@@ -280,9 +283,8 @@
                 padding: 10px 12px;
             }
 
-            /* Mobile Logo adjustments */
             .logo { font-size: 1.3rem; }
-            .logo img { height: 40px; } /* Slightly smaller on phone */
+            .logo img { height: 40px; }
 
             .nav-links {
                 justify-content: center;
@@ -299,7 +301,14 @@
                 font-size: 0.85rem;
             }
 
-            .hero { height: auto; min-height: 60vh; padding: 50px 20px; background-position: 15% center ; }
+            /* Mobile Hero with Left Focus for Ganpati */
+            .hero { 
+                height: auto; 
+                min-height: 60vh; 
+                padding: 50px 20px; 
+                background-position: 15% center !important; 
+            }
+            
             .hero h1 { font-size: 2.4rem; }
             .hero p { font-size: 1.05rem; }
 
@@ -314,11 +323,8 @@
             .cat-item { flex-direction: column; text-align: center; font-size: 0.95rem; }
 
             .products { padding: 50px 5%; }
-
             .section-header h2 { font-size: 2.1rem; }
-
             .festival-banner { padding: 45px 5%; }
-
             .footer-grid { text-align: center; }
         }
 
@@ -352,17 +358,18 @@
 <nav>
     <div class="nav-container">
         
-        <a href="#" class="logo">
+        <a href="javascript:void(0);" onclick="window.scrollTo(0,0)" class="logo">
             <img src="logo.jpg" alt="Brand Logo"> 
             Shudh Puja Samagari Ghar
         </a>
 
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#products">Collection</a>
-            <a href="#festivals">Festivals</a>
+            <a href="javascript:void(0);" onclick="window.scrollTo(0,0)">Home</a>
+            <a href="javascript:void(0);" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Collection</a>
+            <a href="javascript:void(0);" onclick="document.getElementById('festivals').scrollIntoView({behavior: 'smooth'})">Festivals</a>
         </div>
-        <a href="#contact" class="cta-btn">Visit Store</a>
+        
+        <a href="javascript:void(0);" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn">Visit Store</a>
     </div>
 </nav>
 
@@ -373,7 +380,7 @@
         <span style="display:block; margin-top:10px; font-family:'Lora',serif; color:var(--primary); font-weight:600;">"Har Puja Mai Apke Sath"</span>
     </p>
     <div class="hero-btns">
-        <a href="#products" class="cta-btn">See Our Collection</a>
+        <a href="javascript:void(0);" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="cta-btn">See Our Collection</a>
     </div>
 </section>
 
