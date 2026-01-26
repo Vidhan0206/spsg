@@ -217,6 +217,7 @@
             transform: translateY(-5px);
         }
 
+        /* FIXED CSS: Removed 'loading' and 'decoding' from here */
         .product-img {
             height: 220px;
             width: 100%;
@@ -227,9 +228,6 @@
             width: 100%; 
             height: 100%; 
             object-fit: cover;
-            /* INSTANT LOAD: Eagerly load images in background */
-            loading: eager;
-            decoding: async;
         }
 
         .product-info { padding: 20px; text-align: center; }
@@ -260,13 +258,13 @@
         .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text-main); font-family: 'Lora', serif; }
         .about-text p { margin-bottom: 15px; color: var(--text-light); font-size: 1rem; }
         
+        /* FIXED CSS: Removed 'loading' from here */
         .about-img { flex: 1; text-align: center; display: flex; justify-content: center; }
         .about-img img { 
             max-width: 300px; 
             width: 100%; 
             border-radius: 10px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            loading: eager;
         }
 
         /* --- FOOTER --- */
@@ -496,7 +494,7 @@
                 <p>Authentic Gold and Silver plated Pratima</p>
             </div>
         </div>
-<div class="product-card">
+        <div class="product-card">
             <div class="product-img">
                 <img src="img/vastu.png" alt="Vastu Remedies Articles and Yantras" loading="eager" decoding="async">
             </div>
@@ -536,12 +534,12 @@
                 <li>Amravati, Maharashtra 444605</li>
             </ul>
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.XXXXX!2d77.781234!3d20.938765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5559bdb849cbf266!2sShudh%20Puja%20Samagri%20Ghar!5e0!3m2!1sen!2sin!4v1700000000000"
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.7837422817447!2d77.7538453!3d20.9210185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a4b0fe11b8f7%3A0x5559bdb849cbf266!2sShudh%20Puja%20Samagri%20Ghar!5e0!3m2!1sen!2sin!4v1769446285877!5m2!1sen!2sin"
                 width="100%" height="120"
-                style="border:0; margin-top:10px;"
+                style="border:0; margin-top:10px; border-radius: 8px;"
                 allowfullscreen=""
-                loading="lazy"
+                loading="eager"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
