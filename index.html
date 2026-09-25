@@ -12,7 +12,7 @@
     <meta name="keywords" content="Puja Samagri Amravati, Hawan Samagri, Rudraksha Shop Amravati, Puja Store Near Me, Diwali Puja Items, Navratri Puja Samagri">
     <meta name="author" content="Shudh Puja Samagari Ghar">
     
-    <link rel="preload" href="img/hero.jpg" as="image">
+    <link rel="preload" href="img/hero.webp" as="image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,375 +37,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </noscript>
 
-    <style>
-        /* SMOOTH SCROLL & OFFSET FIX */
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        :root {
-            --primary: #E67E22;
-            --primary-light: #FAD7A0;
-            --accent: #B9770E;
-            --bg-body: #FDFBF7;
-            --bg-card: #FFFFFF;
-            --text-main: #4E342E;
-            --text-light: #795548;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 { font-family: 'Lora', serif; }
-
-        a { text-decoration: none; cursor: pointer; }
-        ul { list-style: none; }
-
-        /* --- NAVIGATION --- */
-        nav {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            margin-left: auto;
-            margin-right: 40px;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            font-weight: 400;
-            font-size: 0.95rem;
-            transition: 0.3s;
-            position: relative;
-        }
-
-        .nav-links a:hover { color: var(--primary); }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after { width: 100%; }
-
-        .cta-btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: 0.3s;
-            white-space: nowrap;
-            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
-        }
-
-        .cta-btn:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 85vh;
-            /* HERO IMAGE (Kept as JPG) */
-            background: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.7)), url('img/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 35px;
-            color: var(--text-light);
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* --- CATEGORIES --- */
-        .categories-bar {
-            background-color: var(--primary-light);
-            padding: 40px 5%;
-            text-align: center;
-            margin-top: -25px;
-            position: relative;
-            z-index: 10;
-            border-radius: 8px;
-            margin-left: 5%;
-            margin-right: 5%;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .cat-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            color: var(--text-main);
-        }
-        
-        .cat-item i { color: var(--primary); font-size: 1.2rem; }
-
-        /* --- PRODUCTS --- */
-        .products { padding: 100px 10%; }
-
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
-        .section-header p { color: var(--text-light); }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 40px;
-        }
-
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            transform: translateY(-5px);
-        }
-
-        .product-img {
-            height: 220px;
-            width: 100%;
-            background-color: #f0f0f0;
-        }
-        
-        .product-img img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover;
-        }
-
-        .product-info { padding: 20px; text-align: center; }
-        .product-info h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--accent); }
-        .product-info p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px; }
-
-        /* --- FESTIVAL BANNER --- */
-        .festival-banner {
-            background-color: var(--text-main);
-            color: #fff;
-            padding: 60px 10%;
-            text-align: center;
-        }
-        
-        .festival-banner h2 { color: var(--primary-light); margin-bottom: 15px; }
-        .festival-banner p { opacity: 0.8; max-width: 700px; margin: 0 auto 30px; }
-
-        /* --- ABOUT SECTION --- */
-        .about-section {
-            background-color: #fff;
-            padding: 80px 10%;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text { flex: 1; }
-        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text-main); font-family: 'Lora', serif; }
-        .about-text p { margin-bottom: 15px; color: var(--text-light); font-size: 1rem; }
-        
-        .about-img { flex: 1; text-align: center; display: flex; justify-content: center; }
-        .about-img img { 
-            max-width: 300px; 
-            width: 100%; 
-            border-radius: 10px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #fffaf3;
-            border-top: 1px solid #eee;
-            padding: 35px 5% 15px;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            align-items: start;
-        }
-
-        .footer-col h4 {
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .footer-col ul li { margin-bottom: 8px; color: var(--text-light); font-size: 0.9rem; }
-        .footer-col a { color: var(--text-light); transition: 0.3s; }
-        .footer-col a:hover { color: var(--primary); }
-        .footer-col i { color: var(--primary); margin-right: 6px; }
-
-        .copyright {
-            text-align: center;
-            margin-top: 18px;
-            padding-top: 8px;
-            border-top: 1px solid #eee;
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        /* --- MOBILE FIXES --- */
-        @media (max-width: 768px) {
-
-            .nav-container {
-                flex-direction: column;
-                gap: 8px;
-                padding: 10px 12px;
-            }
-
-            .logo { font-size: 1.3rem; }
-            .logo img { height: 40px; }
-
-            .nav-links {
-                justify-content: center;
-                gap: 15px;
-                margin: 0;
-                width: 100%;
-                flex-wrap: wrap;
-            }
-
-            .nav-links a { font-size: 0.85rem; }
-
-            .cta-btn {
-                width: auto;
-                padding: 8px 18px;
-                font-size: 0.85rem;
-            }
-
-            .hero { 
-                height: auto; 
-                min-height: 60vh; 
-                padding: 50px 20px; 
-                background-position: 15% center !important; 
-            }
-            
-            .hero h1 { font-size: 2.4rem; }
-            .hero p { font-size: 1.05rem; }
-
-            .categories-bar {
-                margin-top: 20px;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-                padding: 20px;
-            }
-
-            .cat-item { flex-direction: column; text-align: center; font-size: 0.95rem; }
-
-            .products { padding: 50px 5%; }
-            .section-header h2 { font-size: 2.1rem; }
-            .festival-banner { padding: 45px 5%; }
-            
-            .about-section { flex-direction: column-reverse; padding: 50px 5%; text-align: center; }
-            .about-text h2 { font-size: 2.1rem; }
-            .about-img img { max-width: 200px; margin-bottom: 20px; }
-
-            .footer-grid { text-align: center; }
-        }
-
-        @media (max-width: 480px) {
-            .categories-bar { grid-template-columns: 1fr 1fr; }
-            footer iframe { height: 110px; border-radius: 6px; }
-            .cta-btn { padding: 12px 20px; font-size: 0.9rem; }
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 18px;
-            right: 18px;
-            background: #25D366;
-            color: white;
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-            z-index: 9999;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Vercel Web Analytics -->
     <script>
@@ -422,6 +54,33 @@
 
   gtag('config', 'G-GQ600RX9QH');
 </script>
+
+    <!-- Open Graph / WhatsApp / Facebook Previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shudh Puja Samagari Ghar | Amravati">
+    <meta property="og:description" content="Your one-stop destination for authentic Puja Samagri. Everything you need for your devotion, delivered with purity.">
+    <meta property="og:image" content="https://www.shudhpujasamagri.com/img/hero.webp">
+
+    <!-- Local Business Structured Data for Google Maps -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Shudh Puja Samagari Ghar",
+      "image": "https://www.shudhpujasamagri.com/img/logo.webp",
+      "description": "Authentic Puja Samagri store in Amravati since 1995.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop Number 1, Rajapeth, Chowk",
+        "addressLocality": "Amravati",
+        "addressRegion": "Maharashtra",
+        "postalCode": "444605",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919960641535",
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-21:00"
+    }
+    </script>
 </head>
 
 <body>
@@ -429,19 +88,19 @@
 <nav>
     <div class="nav-container">
         
-        <a href="javascript:void(0);" onclick="window.scrollTo(0,0)" class="logo">
-            <img src="img/logo.jpg" alt="Brand Logo" loading="eager"> 
+        <a href="#" class="logo">
+            <img src="img/logo.webp" alt="Brand Logo" loading="eager"> 
             Shudh Puja Samagari Ghar
         </a>
 
         <div class="nav-links">
-            <a href="javascript:void(0);" onclick="window.scrollTo(0,0)">Home</a>
-            <a href="javascript:void(0);" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Collection</a>
-            <a href="javascript:void(0);" onclick="document.getElementById('festivals').scrollIntoView({behavior: 'smooth'})">Festivals</a>
-            <a href="javascript:void(0);" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Us</a>
+            <a href="#">Home</a>
+            <a href="#products">Collection</a>
+            <a href="puja-guides.html">Puja Guides</a>
+            <a href="#about">About Us</a>
         </div>
         
-        <a href="javascript:void(0);" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="cta-btn">Visit Store</a>
+        <a href="#contact" class="cta-btn">Visit Store</a>
     </div>
 </nav>
 
@@ -452,11 +111,11 @@
         <span style="display:block; margin-top:10px; font-family:'Lora',serif; color:var(--primary); font-weight:600;">"Har Puja Mai Apke Sath"</span>
     </p>
     <div class="hero-btns">
-        <a href="javascript:void(0);" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="cta-btn">See Our Collection</a>
+        <a href="#products" class="cta-btn">See Our Collection</a>
     </div>
 </section>
 
-<div class="categories-bar">
+<div class="categories-bar reveal">
     <div class="cat-item"><i class="fas fa-fire-alt"></i> Hawan Samagari</div>
     <div class="cat-item"><i class="fas fa-certificate"></i> Certified Rudraksha</div>
     <div class="cat-item"><i class="fas fa-calendar-alt"></i> Festival Items</div>
@@ -464,13 +123,13 @@
 </div>
 
 <section id="products" class="products">
-    <div class="section-header">
-        <h2>Everything You Need</h2>
-        <p>From daily lighting of the lamp to grand Hawan ceremonies.</p>
+    <div class="section-header reveal">
+        <h2>Your One-Stop Puja Destination</h2>
+        <p>Why visit multiple stores? We have <strong>everything</strong> you need under one roof—from daily essentials to rare, specialized Samagri.</p>
     </div>
 
     <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/hawan.webp" alt="Hawan samagri kit with mango wood and puja items" loading="lazy" decoding="async">
             </div>
@@ -480,7 +139,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/dailypuja.webp" alt="Daily puja items like agarbatti kapoor and cotton batti" loading="lazy" decoding="async">
             </div>
@@ -490,7 +149,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/brass.webp" alt="Brass diyas bells and temple idols" loading="lazy" decoding="async">
             </div>
@@ -500,7 +159,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/rudraksh.webp" alt="Certified original rudraksha beads with authenticity card" loading="lazy" decoding="async">
             </div>
@@ -513,7 +172,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/poshak.webp" alt="God Poshak and Vastra dresses" loading="lazy" decoding="async">
             </div>
@@ -523,7 +182,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/pratima.webp" alt="Gold and Silver Pratima Idols" loading="lazy" decoding="async">
             </div>
@@ -533,7 +192,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card reveal">
             <div class="product-img">
                 <img src="img/vastu.webp" alt="Vastu Remedies Articles and Yantras" loading="lazy" decoding="async">
             </div>
@@ -542,31 +201,44 @@
                 <p>Complete range of Vastu remedies including Yantras, Pyramids, and correction articles to remove defects and bring positivity.</p>
             </div>
         </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <img src="img/puja_kit.webp" alt="Complete Puja Kits for all occasions" loading="lazy" decoding="async">
+            </div>
+            <div class="product-info">
+                <h3>Complete Puja Kits</h3>
+                <p>Don't want to buy items one-by-one? Get our ready-made, pre-packed kits for Diwali, Navratri, and more.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="festivals" class="festival-banner">
-    <h2>Ready for the Next Festival?</h2>
-    <p>Whether it's Diwali, Navratri, Ganesh Chaturthi, or a Satyanarayan Puja at home, we have pre-packed samagri lists ready for you.</p>
-    <a href="https://wa.me/919766320649" class="cta-btn" style="border:1px solid white;">Order List on WhatsApp</a>
+<section id="festivals" class="festival-banner reveal">
+    <h2>Planning Your Next Puja?</h2>
+    <p>Not sure what items you need? We have created complete step-by-step guides and Samagri checklists for Diwali, Satyanarayan, and more.</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="puja-guides.html" class="cta-btn" style="background: white; color: var(--text-main);">View Puja Guides</a>
+        <a href="https://wa.me/919766320649" class="cta-btn" style="border:1px solid white; background: transparent;">Order on WhatsApp</a>
+    </div>
 </section>
 
 <section id="about" class="about-section">
-    <div class="about-text">
+    <div class="about-text reveal">
         <h2>Our Legacy Since 1995</h2>
         <p>Established in <strong>1995</strong>, <strong>Shudh Puja Samagari Ghar</strong> has been the trusted heart of Amravati's spiritual community for over three decades.</p>
         <p>For more than 30 years, we have served generations of families, ensuring that every prayer is supported by pure and authentic offerings. We are dedicated to preserving our ancient traditions while providing the highest quality religious essentials.</p>
         <p>We offer a complete collection of Puja Samagri for every type of ritual—whether it is for daily worship or a special ceremony. We promise that every item you take home brings positive energy, sanctity, and trust to your Puja.</p>
     </div>
-    <div class="about-img">
-        <img src="img/logo.jpg" alt="Shudh Puja Samagari Ghar Amravati since 1995" loading="lazy">
+    <div class="about-img reveal">
+        <img src="img/logo.webp" alt="Shudh Puja Samagari Ghar Amravati since 1995" loading="lazy">
     </div>
 </section>
 
 <footer id="contact">
     <div class="footer-grid">
 
-        <div class="footer-col">
+        <div class="footer-col reveal">
             <h4>Shudh Puja Samagari Ghar</h4>
             <ul>
                 <li>Shop Number 1, Rajapeth, Chowk</li>
@@ -584,15 +256,16 @@
 
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col reveal">
             <h4>Contact Us</h4>
             <ul>
                 <li><i class="fas fa-phone"></i> <a href="tel:+919960641535">+91 9960641535</a></li>
                 <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919766320649">+91 9766320649</a></li>
+                <li><i class="fab fa-instagram" style="color: #E1306C;"></i> <a href="https://www.instagram.com/shudhpujasamagri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col reveal">
             <h4>Store Hours</h4>
             <ul>
                 <li>Mon - Sat: 9:00 AM - 9:00 PM</li>
@@ -610,5 +283,35 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+
+<!-- Scroll Reveal Animation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach((entry, index) => {
+                if(entry.isIntersecting) {
+                    // Add slight stagger to cards appearing at the same time
+                    if(entry.target.classList.contains('product-card')) {
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, index * 100);
+                    } else {
+                        entry.target.classList.add('active');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        reveals.forEach(reveal => {
+            revealOnScroll.observe(reveal);
+        });
+    });
+</script>
 </body>
 </html>
