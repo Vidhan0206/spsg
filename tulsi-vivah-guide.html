@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<nav>
+<nav class="notranslate">
     <div class="nav-container">
         <a href="index.html" class="logo">
             <img src="img/logo.webp" alt="Brand Logo" loading="lazy"> 
@@ -47,12 +47,13 @@
             <a href="index.html#products">Collection</a>
             <a href="puja-guides.html" style="color: var(--primary); font-weight: 500;">Puja Guides</a>
             <a href="index.html#about">About Us</a>
+            
         </div>
         <a href="index.html#contact" class="cta-btn">Visit Store</a>
     </div>
 </nav>
 
-<header class="guide-header">
+<header class="guide-header notranslate">
     <div class="breadcrumb">
         <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 5px;"></i> 
         <a href="puja-guides.html">Puja Guides</a> <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 5px;"></i> 
@@ -63,9 +64,9 @@
 </header>
 
 <main class="guide-content">
-    <p class="intro-text">Tulsi Vivah is the ceremonial marriage of the Tulsi plant (holy basil, representing Goddess Vrinda) to the Hindu god Vishnu or his avatar Krishna (often represented by the Shaligram stone). This festival marks the end of the monsoon and the auspicious beginning of the Hindu wedding season.</p>
+    <p class="intro-text notranslate">Tulsi Vivah is the ceremonial marriage of the Tulsi plant (holy basil, representing Goddess Vrinda) to the Hindu god Vishnu or his avatar Krishna (often represented by the Shaligram stone). This festival marks the end of the monsoon and the auspicious beginning of the Hindu wedding season.</p>
 
-    <div class="samagri-section">
+    <div class="samagri-section notranslate">
         <h2 class="section-title"><i class="fas fa-clipboard-list"></i> The Samagri Checklist</h2>
         
         <!-- Interactive Live Progress Bar -->
@@ -96,7 +97,7 @@
         </div>
     </div>
 
-    <div class="guide-cta">
+    <div class="guide-cta notranslate">
         <h3>Overwhelmed by the list?</h3>
         <p>Don't spend hours searching for every small item. Order our complete, pre-packed kit and get 100% pure Samagri delivered or kept ready for pickup.</p>
         <a href="https://wa.me/919766320649?text=Hello,%20I%20would%20like%20to%20order%20the%20Complete%20Tulsi Vivah Puja%20Kit." class="btn-white">
@@ -105,7 +106,11 @@
     </div>
 
     <div class="vidhi-section">
-        <h2 class="section-title"><i class="fas fa-praying-hands"></i> Step-by-Step Vidhi</h2>
+        <h2 class="section-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <span><i class="fas fa-praying-hands"></i> Step-by-Step Vidhi</span>
+            <button id="lang-btn" onclick="toggleVidhiLanguage()" class="btn-white" style="padding: 6px 15px; font-size: 0.95rem; cursor: pointer; border: 1px solid var(--primary); color: var(--primary); background: transparent; display: flex; align-items: center; gap: 8px; box-shadow: none;"><i class="fas fa-language"></i> हिंदी में पढ़ें</button>
+        </h2>
+<div id="vidhi-en">
         <div class="vidhi-step">
             <div class="step-number">1</div>
             <div class="step-content">
@@ -141,10 +146,48 @@
                 <p>Perform a grand Aarti of both Tulsi Mata and Lord Vishnu. Offer a lavish Bhog of sweets and seasonal fruits. Family members and neighbors gather, light sparklers, and sing traditional wedding songs (Banna-Banni) to celebrate the divine union.</p>
             </div>
         </div>
+        </div>
+<div id="vidhi-hi" style="display: none;">
+        <div class="vidhi-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h4>मंडप की तैयारी</h4>
+                <p>कृपया ऊपर दी गई सामग्री और विधि का पालन करें। यह पूजा पूरी श्रद्धा और भक्ति के साथ की जानी चाहिए। (अनुवाद प्रगति पर है)</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h4>तुलसी का दुल्हन की तरह श्रृंगार</h4>
+                <p>कृपया ऊपर दी गई सामग्री और विधि का पालन करें। यह पूजा पूरी श्रद्धा और भक्ति के साथ की जानी चाहिए। (अनुवाद प्रगति पर है)</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h4>वर (शालीग्राम) की स्थापना</h4>
+                <p>कृपया ऊपर दी गई सामग्री और विधि का पालन करें। यह पूजा पूरी श्रद्धा और भक्ति के साथ की जानी चाहिए। (अनुवाद प्रगति पर है)</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h4>विवाह (विवाह अनुष्ठान)</h4>
+                <p>कृपया ऊपर दी गई सामग्री और विधि का पालन करें। यह पूजा पूरी श्रद्धा और भक्ति के साथ की जानी चाहिए। (अनुवाद प्रगति पर है)</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h4>आरती और उत्सव</h4>
+                <p>कृपया ऊपर दी गई सामग्री और विधि का पालन करें। यह पूजा पूरी श्रद्धा और भक्ति के साथ की जानी चाहिए। (अनुवाद प्रगति पर है)</p>
+            </div>
+        </div>
+        </div>
     </div>
 </main>
 
-<footer id="contact">
+<footer id="contact" class="notranslate">
     <div class="footer-grid">
         <div class="footer-col">
             <h4>Shudh Puja Samagari Ghar</h4>
@@ -209,6 +252,27 @@
 <a href="https://wa.me/919766320649" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+
+
+
+<script>
+function toggleVidhiLanguage() {
+    var en = document.getElementById('vidhi-en');
+    var hi = document.getElementById('vidhi-hi');
+    var btn = document.getElementById('lang-btn');
+    
+    if (en.style.display !== 'none') {
+        en.style.display = 'none';
+        hi.style.display = 'block';
+        btn.innerHTML = '<i class="fas fa-language"></i> View in English';
+    } else {
+        en.style.display = 'block';
+        hi.style.display = 'none';
+        btn.innerHTML = '<i class="fas fa-language"></i> हिंदी में पढ़ें';
+    }
+}
+</script>
 
 </body>
 </html>

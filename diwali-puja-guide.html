@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<nav>
+<nav class="notranslate">
     <div class="nav-container">
         <a href="index.html" class="logo">
             <img src="img/logo.webp" alt="Brand Logo" loading="lazy"> 
@@ -47,12 +47,13 @@
             <a href="index.html#products">Collection</a>
             <a href="puja-guides.html" style="color: var(--primary); font-weight: 500;">Puja Guides</a>
             <a href="index.html#about">About Us</a>
+            
         </div>
         <a href="index.html#contact" class="cta-btn">Visit Store</a>
     </div>
 </nav>
 
-<header class="guide-header">
+<header class="guide-header notranslate">
     <div class="breadcrumb">
         <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 5px;"></i> 
         <a href="puja-guides.html">Puja Guides</a> <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 5px;"></i> 
@@ -63,9 +64,9 @@
 </header>
 
 <main class="guide-content">
-    <p class="intro-text">Diwali, the festival of lights, is incomplete without the traditional Lakshmi and Ganesh Puja. Lord Ganesha is worshipped first to remove all obstacles (Vighnaharta), and Goddess Lakshmi is invoked to bestow spiritual and material wealth. Performing this ritual with pure devotion during the Pradosh Kaal Muhurat is highly auspicious.</p>
+    <p class="intro-text notranslate">Diwali, the festival of lights, is incomplete without the traditional Lakshmi and Ganesh Puja. Lord Ganesha is worshipped first to remove all obstacles (Vighnaharta), and Goddess Lakshmi is invoked to bestow spiritual and material wealth. Performing this ritual with pure devotion during the Pradosh Kaal Muhurat is highly auspicious.</p>
 
-    <div class="samagri-section">
+    <div class="samagri-section notranslate">
         <h2 class="section-title"><i class="fas fa-clipboard-list"></i> The Samagri Checklist</h2>
         
         <!-- Interactive Live Progress Bar -->
@@ -101,7 +102,7 @@
         </div>
     </div>
 
-    <div class="guide-cta">
+    <div class="guide-cta notranslate">
         <h3>Overwhelmed by the list?</h3>
         <p>Don't spend hours searching for every small item. Order our complete, pre-packed kit and get 100% pure Samagri delivered or kept ready for pickup.</p>
         <a href="https://wa.me/919766320649?text=Hello,%20I%20would%20like%20to%20order%20the%20Complete%20Diwali Lakshmi & Ganesh Puja%20Kit." class="btn-white">
@@ -110,7 +111,11 @@
     </div>
 
     <div class="vidhi-section">
-        <h2 class="section-title"><i class="fas fa-praying-hands"></i> Step-by-Step Vidhi</h2>
+        <h2 class="section-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <span><i class="fas fa-praying-hands"></i> Step-by-Step Vidhi</span>
+            <button id="lang-btn" onclick="toggleVidhiLanguage()" class="btn-white" style="padding: 6px 15px; font-size: 0.95rem; cursor: pointer; border: 1px solid var(--primary); color: var(--primary); background: transparent; display: flex; align-items: center; gap: 8px; box-shadow: none;"><i class="fas fa-language"></i> हिंदी में पढ़ें</button>
+        </h2>
+<div id="vidhi-en">
         <div class="vidhi-step">
             <div class="step-number">1</div>
             <div class="step-content">
@@ -160,10 +165,62 @@
                 <p>Stand up and perform the grand Aarti of Lord Ganesha ('Jai Ganesh Deva') followed by Goddess Lakshmi ('Om Jai Lakshmi Mata') using a camphor lamp. Conclude by offering a handful of flowers (Pushpanjali) and asking for forgiveness for any mistakes (Kshama Prarthana).</p>
             </div>
         </div>
+        </div>
+<div id="vidhi-hi" style="display: none;">
+        <div class="vidhi-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h4>पवित्रीकरण और संकल्प</h4>
+                <p>पूर्व या उत्तर दिशा की ओर मुख करके बैठें। अपने ऊपर और पूजा क्षेत्र में गंगाजल छिड़कें। दाहिने हाथ में जल, अक्षत और फूल लेकर पूजा का संकल्प लें।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h4>दीप प्रज्ज्वलन और स्वस्ति वाचन</h4>
+                <p>अखंड दीपक जलाएं, जिसे रात भर जलते रहना चाहिए। शांति और शुभता के लिए स्वस्ति वाचन मंत्रों का जाप करें।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h4>गणेश और नवग्रह पूजन</h4>
+                <p>हमेशा भगवान गणेश से शुरुआत करें। गंगाजल और पंचामृत से स्नान कराएं। कलावा, जनेऊ, रोली और दूर्वा चढ़ाएं। नवग्रहों की संक्षिप्त पूजा करें।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h4>लक्ष्मी आवाहन और कलश स्थापना</h4>
+                <p>एक तांबे के कलश में जल, सिक्का और सुपारी डालकर चावल पर रखें। देवी लक्ष्मी का आह्वान करें और उन्हें लाल कपड़े पर विराजमान करें।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h4>षोडशोपचार पूजन (16 चरण)</h4>
+                <p>देवी लक्ष्मी को पंचामृत से स्नान कराएं। हल्दी, कुमकुम, चंदन, कमलगट्टा, कौड़ी और फूल चढ़ाएं। खील, बताशा और घर की बनी मिठाइयों का भोग लगाएं।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+                <h4>कुबेर और लेखनी पूजन</h4>
+                <p>भगवान कुबेर की पूजा करें। अपनी तिजोरी की चाबी, बहीखाता और चांदी के सिक्के रखें। बहीखाते पर रोली से स्वास्तिक बनाएं।</p>
+            </div>
+        </div>
+        <div class="vidhi-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+                <h4>महा आरती और पुष्पांजलि</h4>
+                <p>खड़े होकर कपूर के दीपक से भगवान गणेश और देवी लक्ष्मी की महा आरती ('जय लक्ष्मी माता') करें। अंत में पुष्पांजलि अर्पित करें और क्षमा प्रार्थना करें।</p>
+            </div>
+        </div>
+        </div>
     </div>
 </main>
 
-<footer id="contact">
+<footer id="contact" class="notranslate">
     <div class="footer-grid">
         <div class="footer-col">
             <h4>Shudh Puja Samagari Ghar</h4>
@@ -228,6 +285,27 @@
 <a href="https://wa.me/919766320649" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+
+
+
+<script>
+function toggleVidhiLanguage() {
+    var en = document.getElementById('vidhi-en');
+    var hi = document.getElementById('vidhi-hi');
+    var btn = document.getElementById('lang-btn');
+    
+    if (en.style.display !== 'none') {
+        en.style.display = 'none';
+        hi.style.display = 'block';
+        btn.innerHTML = '<i class="fas fa-language"></i> View in English';
+    } else {
+        en.style.display = 'block';
+        hi.style.display = 'none';
+        btn.innerHTML = '<i class="fas fa-language"></i> हिंदी में पढ़ें';
+    }
+}
+</script>
 
 </body>
 </html>
